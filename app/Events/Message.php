@@ -6,6 +6,10 @@ use App\Events\Event;
 
 class Message extends Event
 {
+  /**
+   * $user
+   * @var [type]
+   */
   protected $user;
 
   protected $message;
@@ -16,11 +20,19 @@ class Message extends Event
     $this->message = $message;
   }
 
+  /**
+   * [eventName description]
+   * @return [type] [description]
+   */
   public function eventName()
   {
     return 'message';
   }
 
+  /**
+   * [data description]
+   * @return [type] [description]
+   */
   public function data()
   {
     $payload = $this->message;
